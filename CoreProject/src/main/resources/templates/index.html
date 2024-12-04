@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Core Project</title>
+</head>
+
+<body>
+	<p>Hello, world!</p>
+</body>
+
+</html>
+
+
+<!--
+このコードは、Spring Bootアプリケーションで使用するHTMLテンプレートです。以下、各部分を詳細に解説します。
+
+-
+
+### **1. DOCTYPE宣言**
+```html
+<!DOCTYPE html>
+```
+- HTML5文書であることを宣言しています。
+- これにより、ブラウザはHTML5仕様に従ってこの文書を解析します。
+
+-
+
+### **2. `<html>`タグ**
+```html
+<html xmlns:th="https://www.thymeleaf.org">
+```
+- **`<html>`**: HTML文書のルート要素です。
+- **`xmlns:th="https://www.thymeleaf.org"`**:
+  - **`xmlns:th`**はXML名前空間を定義します。
+  - **`th`**: Thymeleafテンプレートエンジンのプレフィックス。
+  - この設定により、Thymeleaf固有の属性（例: `th:text`, `th:href`など）を使用可能になります。
+
+
+### **3. `<head>`タグ**
+```html
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Core Project</title>
+</head>
+```
+- HTML文書のメタ情報を定義します。
+1. **`<meta charset="UTF-8">`**:
+   - 文書の文字エンコーディングをUTF-8に指定。
+   - 日本語や特殊文字を含むすべての文字を正しく表示するために使用されます。
+   
+2. **`<meta name="viewport" content="width=device-width, initial-scale=1">`**:
+   - レスポンシブデザインを実現するための設定。
+   - デバイスの幅（`width=device-width`）に合わせて文書の幅を調整します。
+   - ズーム倍率（`initial-scale=1`）を指定。
+   
+3. **`<title>Core Project</title>`**:
+   - ブラウザタブや検索エンジンの結果で表示されるタイトルを設定。
+
+-
+
+### **4. `<body>`タグ**
+```html
+<body>
+	<p>Hello, world!</p>
+</body>
+```
+- HTML文書の主な内容（ユーザーに表示される部分）を定義します。
+1. **`<p>Hello, world!</p>`**:
+   - 段落要素（`<p>`）内に文字列「Hello, world!」を表示。
+   - この要素はブラウザでそのまま表示されます。
+
+-
+
+### **5. 全体の役割**
+このHTMLテンプレートは非常に基本的な構造を持ち、以下のような目的で使用できます：
+1. **Thymeleafのテンプレートとして使用**:
+   - 名前空間`th`が設定されているため、Thymeleafを使ったサーバーサイドレンダリングで使用可能です。
+2. **最小限のHTML文書の表示**:
+   - 「Hello, world!」のテキストをWebページとして表示。
+3. **レスポンシブ対応**:
+   - `viewport`メタタグが設定されているため、スマートフォンやタブレットでの適切な表示が可能。
+
+-
+
+### **6. 応用例**
+このテンプレートを拡張する場合、以下のような要素を追加できます：
+1. **Thymeleaf変数埋め込み**:
+   ```html
+   <p th:text="'Hello, ' + ${username} + '!'">Placeholder</p>
+   ```
+   - サーバーサイドで`username`という変数が設定されていれば、`Hello, [username]!`が表示されます。
+
+2. **CSS/JavaScriptの追加**:
+   ```html
+   <link rel="stylesheet" th:href="@{/styles/main.css}">
+   <script th:src="@{/scripts/main.js}"></script>
+   ```
+
+3. **動的コンテンツ**:
+   - サーバーから受け取るデータをテンプレート内に埋め込んで動的にレンダリングできます。
+
+-
+
+### **このHTMLの用途**
+- 基本的なテストページやデバッグ用テンプレートとして最適。
+- 次のステップとして、Thymeleafを使ったデータ埋め込みやスタイルの追加が考えられます。
+
+
+
+-->
